@@ -8,9 +8,10 @@ Aliases : BamzOfficial, Mr. Byte
 ## Overview
 
 Just added the  Service and Sub-Container based Classes from my CombatService in my game as an example of work.
+RBXM is just the full module with all of these under it.
 
 ```bash
-The .RBXM is just the full module.
+curl -O https://github.com/PrismStudioRBLX/Roblox-Modules/raw/refs/heads/main/CombatService.rbxm
 ```
 ## PS
 
