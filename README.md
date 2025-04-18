@@ -2,7 +2,7 @@
 
 Discord for contact : _bamz
 
-Aliases : BamzOfficial, Mr. Byte
+Aliases : Bamz, Mr. Byte
 
 
 ## Overview
