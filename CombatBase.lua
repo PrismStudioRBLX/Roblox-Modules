@@ -836,7 +836,7 @@ function Base:AttemptCarry(Character)
 	
 	local Target =  Base:GetNearestGripTarget(Character)
 
-	if not Target then return end -- Stoppi
+	if not Target then return end
 	if not Base:CanAttack(Character) then return end -- Stopping If Stunned
 
 	local CharacterHumanoid = PlayerLib:IsCharacterAlive(Character) :: Humanoid
