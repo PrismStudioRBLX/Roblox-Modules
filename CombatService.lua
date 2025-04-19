@@ -240,13 +240,11 @@ function CombatService.Damage(Attacker : Model, Victim : Model, DamageData : Dam
 		if not DOT_Object.Destroy or DOT_Object.Janitor.CurrentlyCleaning then return end
 		DOT_Object:Destroy()
 	else
-		--Damage_FX_Remote:FireAllClients(DamageData, Victim)
 		EffectsService:Fire("DamageFX",{
 			Caster = Victim;
 			Effect = "Combat/HitEffect/Impulse"
 		})
-
-		--- Enable Ragdoll
+		
 		if DamageData.InstantKill then
 			victimHumanoid:TakeDamage(DamageData.Damage)
 			
@@ -254,7 +252,7 @@ function CombatService.Damage(Attacker : Model, Victim : Model, DamageData : Dam
 		else
 			victimHumanoid.Health = math.max(victimHumanoid.Health - DamageData.Damage,.1)
 
-			if victimHumanoid.Health <= .12 then -- RAGDOLL THIS NIGGAAAAAA HES COOKEDDD0
+			if victimHumanoid.Health <= .12 then
 				Victim:SetAttribute("Knocked",true)
 				Container:EnableRagdoll(15, false, function() Victim:SetAttribute("Knocked",false) end)
 			end
